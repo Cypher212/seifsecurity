@@ -261,3 +261,17 @@ footer {
     box-shadow: 0 0 10px #0ff;
     border-radius: 10px 10px 0 0;
 }
+
+footer {
+    background-color: rgba(10, 10, 30, 0.9);
+    color: #0ff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1.2em;
+    text-shadow:
+        0 0 5px #0ff,
+        0 0 10px #0ff;
+    box-shadow: 0 0 10px #0ff;
+    border-radius: 10px 10px 0 0;
+}
