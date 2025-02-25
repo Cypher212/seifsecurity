@@ -1,0 +1,263 @@
+body {
+    background: url("cyberpunk-city.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #0ff;
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    color: #ff00ff;
+    text-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+}
+
+#site-title {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 20px;
+    border: 5px solid #ff00ff;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow:
+        0 0 15px #ff00ff,
+        0 0 30px #ff00ff;
+    background-color: rgba(10, 10, 30, 0.8);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #520045;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #0ff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-shadow: 0 0 5px #0ff;
+}
+
+.neon-text {
+    color: #0ff;
+    text-shadow:
+        0 0 5px #0ff,
+        0 0 10px #0ff;
+}
+
+section {
+    background-color: rgba(10, 10, 30, 0.9);
+    padding: 40px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #0ff;
+}
+
+form {
+    background-color: rgba(0, 0, 50, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 10px #0ff;
+    width: 90%;
+    max-width: 400px;
+}
+
+input,
+textarea {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    background: transparent;
+    border: 1px solid #0ff;
+    color: #0ff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.glow-button {
+    background-color: #ff00ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+    border-radius: 20px;
+}
+
+.glow-button:hover {
+    box-shadow:
+        0 0 15px #ff00ff,
+        0 0 30px #ff00ff;
+}
+
+/* Newsletter Section */
+#newsletter {
+    background-color: rgba(10, 10, 30, 0.9);
+    padding: 40px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #0ff;
+}
+
+#newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#newsletter input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0ff;
+    border-radius: 20px;
+    background: transparent;
+    color: #0ff;
+}
+
+#newsletter button {
+    background-color: #ff00ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+    border-radius: 20px;
+}
+
+#newsletter button:hover {
+    text-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+/* Image Gallery */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gallery h2 {
+    text-align: center;
+    width: 100%;
+    text-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+}
+
+#gallery img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow:
+        0 0 10px #0ff,
+        0 0 20px #0ff;
+    transition:
+        transform 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+    border: 3px solid #ff00ff;
+    padding: 5px;
+}
+
+#gallery img:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 15px #ff00ff,
+        0 0 30px #ff00ff;
+}
+#news-feed {
+    background-color: rgba(10, 10, 30, 0.9);
+    padding: 40px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #0ff;
+}
+
+#news-feed h2 {
+    color: #0ff;
+    text-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+}
+
+#news-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#news-list li {
+    margin: 10px 0;
+}
+
+#news-list a {
+    color: #0ff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-shadow: 0 0 5px #0ff;
+}
+
+#news-list a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(10, 10, 30, 0.9);
+    color: #0ff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1.2em;
+    text-shadow:
+        0 0 5px #0ff,
+        0 0 10px #0ff;
+    box-shadow: 0 0 10px #0ff;
+    border-radius: 10px 10px 0 0;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeifSecurity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="neon-text">SeifSecurity</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Submit Ticket</a></li>
+                <li><a href="#newsfeed">News</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2 class="neon-text">About Us</h2>
+        <p>With over 16 years of experience in computer repairs, SeifSecurity is dedicated to providing top-notch service with a high satisfaction rate. We specialize in troubleshooting, security, and system optimization.</p>
+    </section>
+
+    <section id="contact">
+        <h2 class="neon-text">Submit a Ticket</h2>
+        <form action="mailto:sp4cede4th.nft@ud.me" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Describe your computer issue" required></textarea>
+            <button type="submit" class="glow-button">Submit</button>
+        </form>
+    </section>
+
+    <section id="newsfeed">
+        <h2 class="neon-text">Latest Tech News</h2>
+        <div class="news-item">
+            <h3>New AI-Powered Security Tools Released</h3>
+            <p>AI is changing cybersecurity, making threat detection faster and more accurate.</p>
+            <a href="https://www.unite.ai/ai-cybersecurity-tools/" class="glow-button">Read More</a>
+        </div>
+        <div class="news-item">
+            <h3>How to Protect Your PC from Malware in 2025</h3>
+            <p>Learn the latest methods to keep your system safe from new threats.</p>
+            <a href="https://www.pcmag.com/picks/the-best-antivirus-protection" class="glow-button">Read More</a>
+        </div>
+    </section>
+    
+    <section id="news-feed">
+    <h2>Computer News</h2>
+    <ul id="news-list"></ul>
+</section>
+
+    <section id="gallery">
+        <h2 class="neon-text">Gallery</h2>
+        <div class="gallery-container">
+            <img src="image1.jpg" alt="Cybersecurity Setup">
+            <img src="image2.jpg" alt="Computer Repair Workstation">
+            <img src="image3.jpg" alt="Advanced Security Systems">
+        </div>
+    </section>
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const rssUrl = 'https://www.techrepublic.com/rssfeeds/articles/';
+    const newsList = document.getElementById('news-list');
+
+    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.items) {
+                data.items.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<a href="${item.link}" target="_blank">${item.title}</a>`;
+                    newsList.appendChild(listItem);
+                });
+            } else {
+                newsList.innerHTML = "<li>Unable to load news at this time.</li>";
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching the RSS feed:', error);
+            newsList.innerHTML = "<li>Failed to load news.</li>";
+        });
+});
+</script>
+    
+</body>
+</html>
