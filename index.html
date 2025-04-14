@@ -5,90 +5,228 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeifSecurity</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1 class="neon-text">SeifSecurity</h1>
+        <h1>SeifSecurity</h1>
         <nav>
             <ul>
                 <li><a href="#about">About Us</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Submit Ticket</a></li>
-                <li><a href="#newsfeed">News</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-            </ul>
+                <li><a href="#news-feed">News</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#adobe-stock">Stock-Images</a></li>
+                </ul>
         </nav>
     </header>
 
-    <section id="about">
+    <section id="about" class="reveal-on-scroll">
         <h2 class="neon-text">About Us</h2>
         <p>With over 16 years of experience in computer repairs, SeifSecurity is dedicated to providing top-notch service with a high satisfaction rate. We specialize in troubleshooting, security, and system optimization.</p>
+        <ul>
+            <li>Virus & Malware Removal</li>
+            <li>Hardware Repair & Upgrades</li>
+            <li>System Tune-ups & Optimization</li>
+            <li>Data Recovery</li>
+            <li>Network Setup & Security</li>
+        </ul>
     </section>
 
-    <section id="contact">
+    <section id="pricing" class="reveal-on-scroll">
+        <h2 class="neon-text">Our Services & Pricing</h2>
+        <div class="pricing-grid">
+             <div class="pricing-item">
+                <h3>Full Computer Inspection & Enhancement</h3>
+                <p>Our comprehensive diagnostic checks your hardware components and software integrity. We optimize system performance by removing junk files, streamlining startup processes, applying essential security updates, and performing physical dust removal (internal/external) to enhance speed, stability, and lifespan. Ideal for preventative maintenance or resolving general slowness.</p>
+                <div class="price">$200 CAD</div>
+            </div>
+            <div class="pricing-item">
+                <h3>Remote Help Access Subscription</h3>
+                <p>Enjoy peace of mind with ongoing remote support. Get timely assistance via secure remote access for troubleshooting minor software issues, answering usage questions, basic setup guidance, and remote check-ups. *Requires initial system compatibility check and setup.* Convenient help without leaving home.</p>
+                <div class="price">$15 CAD / month</div>
+            </div>
+            <div class="pricing-item">
+                <h3>Cybersecurity Assessment</h3>
+                <p>An in-depth evaluation of your home computer or network's security posture. We identify potential vulnerabilities, check for malware/spyware, review firewall/antivirus settings, assess data backup strategies, and provide actionable recommendations to protect your personal data and privacy online. Price varies based on the number of devices and network complexity.</p>
+                <div class="price">$100 - $250 CAD</div>
+            </div>
+            <div class="pricing-item">
+                <h3>Data Recovery (Logical)</h3>
+                <p>Attempted recovery of deleted files, data from formatted drives, or inaccessible files due to logical issues (file system corruption, minor bad sectors). Includes initial diagnostics. *This service covers non-physical drive failures. Complex cases or physically damaged drives require specialized lab recovery (quoted separately). Success is not guaranteed.* Consultation required.</p>
+                <div class="price">Starting at $300 CAD + Media</div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; font-size: 0.9em; color: #ccc;">Prices listed are estimates and may vary based on specific issues. Please contact us via the ticket form for a detailed quote.</p>
+    </section>
+
+    <section id="contact" class="reveal-on-scroll">
         <h2 class="neon-text">Submit a Ticket</h2>
-        <form action="mailto:seifsec1@gmail.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Describe your computer issue" required></textarea>
-            <button type="submit" class="glow-button">Submit</button>
+        <p style="text-align: center;">Having computer troubles? Fill out the form below to submit a support ticket.</p>
+        <form id="contact-form" action="https://formspree.io/f/mwplygql" method="POST">
+            <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+            <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
+            <textarea id="contact-message" name="message" placeholder="Describe your computer issue" required></textarea>
+            <button type="submit" class="glow-button">Submit Ticket</button>
+            <div id="form-error" class="error-message"></div>
         </form>
     </section>
 
-    <section id="newsfeed">
+    <section id="news-feed" class="reveal-on-scroll">
         <h2 class="neon-text">Latest Tech News</h2>
         <div class="news-item">
-            <h3>New AI-Powered Security Tools Released</h3>
-            <p>AI is changing cybersecurity, making threat detection faster and more accurate.</p>
-            <a href="https://www.unite.ai/ai-cybersecurity-tools/" class="glow-button">Read More</a>
-        </div>
-        <div class="news-item">
-            <h3>How to Protect Your PC from Malware in 2025</h3>
-            <p>Learn the latest methods to keep your system safe from new threats.</p>
-            <a href="https://www.pcmag.com/picks/the-best-antivirus-protection" class="glow-button">Read More</a>
-        </div>
+             <h3>New AI-Powered Security Tools Released</h3>
+             <p>AI is changing cybersecurity, making threat detection faster and more accurate.</p>
+             <a href="https://www.unite.ai/ai-cybersecurity-tools/" target="_blank" rel="noopener noreferrer" class="glow-button">Read More</a>
+         </div>
+         <div class="news-item">
+             <h3>How to Protect Your PC from Malware in 2025</h3>
+             <p>Learn the latest methods to keep your system safe from new threats.</p>
+             <a href="https://www.pcmag.com/picks/the-best-antivirus-protection" target="_blank" rel="noopener noreferrer" class="glow-button">Read More</a>
+         </div>
+        <h2 class="neon-text" style="margin-top: 40px; border-top: 1px solid rgba(0, 255, 255, 0.2); padding-top: 25px;">More Tech News (Feed)</h2>
+        <ul id="news-list"><li>Loading news feed...</li></ul>
     </section>
-    
-    <section id="news-feed">
-    <h2>Computer News</h2>
-    <ul id="news-list"></ul>
-</section>
 
-    <section id="gallery">
-        <h2 class="neon-text">Gallery</h2>
-        <div class="gallery-container">
-            <img src="image1.jpg" alt="Cybersecurity Setup">
-            <img src="image2.jpg" alt="Computer Repair Workstation">
-            <img src="image3.jpg" alt="Advanced Security Systems">
+    <section id="reviews" class="reveal-on-scroll">
+        <h2 class="neon-text">Customer Reviews</h2>
+        <div id="reviews-container">
+            <div class="review-item">
+                <p>"SeifSecurity fixed my computer quickly and efficiently. I was very impressed with their professionalism and the fair pricing."</p>
+                <p class="reviewer">- John Doe</p>
+            </div>
+            <div class="review-item">
+                <p>"Great service! My laptop is running like new again after the tune-up. Highly recommend!"</p>
+                <p class="reviewer">- Jane Smith</p>
+            </div>
+        </div>
+        <h3>Add Your Review</h3>
+        <form id="review-form" action="https://formspree.io/f/xyzeorpv" method="POST">
+            <input type="text" id="review-name" name="name" placeholder="Your Name" required>
+            <textarea id="review-text" name="review" placeholder="Write your review here..." required></textarea>
+            <button type="submit" class="glow-button">Submit Review</button>
+             <div id="review-error" class="error-message"></div>
+        </form>
+    </section>
+
+    <section id="adobe-stock" class="reveal-on-scroll">
+        <h2 class="neon-text">Looking for Stock Images?</h2>
+        <p style="text-align: center;">Beyond computer security, I'm also an Adobe Stock Contributor. If you need high-quality, royalty-free images for your projects, feel free to explore my portfolio.</p>
+        <div style="text-align: center; margin-top: 25px;">
+            <a href="https://stock.adobe.com/ca/contributor/212699398/cyph0" target="_blank" rel="noopener noreferrer" class="glow-button">View My Adobe Stock Portfolio</a>
         </div>
     </section>
-    
+    <footer>
+        <p>SeifSecurity &copy; <span id="current-year"></span>. All rights reserved.</p>
+    </footer>
+
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const rssUrl = 'https://www.techrepublic.com/rssfeeds/articles/';
-    const newsList = document.getElementById('news-list');
+    document.addEventListener('DOMContentLoaded', function() {
 
-    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.items) {
-                data.items.forEach(item => {
-                    const listItem = document.createElement('li');
-                    listItem.innerHTML = `<a href="${item.link}" target="_blank">${item.title}</a>`;
-                    newsList.appendChild(listItem);
+        // --- Set Current Year in Footer ---
+        const currentYearSpan = document.getElementById('current-year');
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+
+        // --- RSS News Feed ---
+        const rssUrl = 'https://www.techrepublic.com/rssfeeds/articles/';
+        const newsList = document.getElementById('news-list');
+        if (newsList) { fetchRssFeed(rssUrl, newsList); }
+
+        // --- Contact Form Client-Side Validation (for Formspree) ---
+        const contactForm = document.getElementById('contact-form');
+        const formError = document.getElementById('form-error');
+        if (contactForm && contactForm.action.includes('formspree')) {
+            setupFormValidation(contactForm, formError, ['name', 'email', 'message']);
+        }
+
+        // --- Review Form Client-Side Validation (for Formspree) ---
+        const reviewForm = document.getElementById('review-form');
+        const reviewError = document.getElementById('review-error');
+        if (reviewForm && reviewForm.action.includes('formspree')) {
+            setupFormValidation(reviewForm, reviewError, ['name', 'review']);
+        }
+
+        // --- Helper Function: Email Validation ---
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // --- Helper Function: Fetch RSS ---
+        function fetchRssFeed(url, listElement) {
+             fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`)
+              .then(response => {
+                  if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                  return response.json();
+              })
+              .then(data => {
+                 if (data.status === 'ok' && data.items && data.items.length > 0) {
+                     listElement.innerHTML = '';
+                     data.items.slice(0, 5).forEach(item => {
+                         const listItem = document.createElement('li');
+                         const title = item.title ? item.title.replace(/</g, "&lt;").replace(/>/g, "&gt;") : 'No title';
+                         listItem.innerHTML = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${title}</a>`;
+                         listElement.appendChild(listItem);
+                     });
+                 } else {
+                    console.warn('RSS feed data not found or empty:', data);
+                    listElement.innerHTML = "<li>Could not load news feed at this time.</li>";
+                 }
+              })
+              .catch(error => {
+                  console.error('Error fetching or parsing the RSS feed:', error);
+                  listElement.innerHTML = "<li>Failed to load news feed. Please try again later.</li>";
+              });
+        }
+
+        // --- REUSABLE Helper Function: Form Validation Setup (for Formspree) ---
+        function setupFormValidation(form, errorElement, fieldNames) {
+             form.addEventListener('submit', function(event) {
+                errorElement.style.display = "none";
+                errorElement.innerHTML = "";
+                let errors = [];
+                fieldNames.forEach(fieldName => {
+                    const input = form.elements[fieldName];
+                    if (!input) return;
+                    const value = input.value.trim();
+                    const placeholder = input.placeholder || fieldName;
+                    if (!value) {
+                        errors.push(`Please enter ${placeholder.toLowerCase().replace('your ','').replace('...','')}.`);
+                    } else if (input.type === 'email' && !isValidEmail(value)) {
+                        errors.push(`Please enter a valid email address.`);
+                    }
                 });
-            } else {
-                newsList.innerHTML = "<li>Unable to load news at this time.</li>";
+                if (errors.length > 0) {
+                    event.preventDefault();
+                    errorElement.innerHTML = errors.join("<br>");
+                    errorElement.style.display = "block";
+                }
+            });
+        }
+
+        // --- Intersection Observer for Scroll Animations ---
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1
+        };
+        const observerCallback = (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
             }
-        })
-        .catch(error => {
-            console.error('Error fetching the RSS feed:', error);
-            newsList.innerHTML = "<li>Failed to load news.</li>";
-        });
-});
-</script>
-       <footer>
-    <p>SeifSecurity. All rights reserved.</p>
-</footer>
-    
+          });
+        };
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
+        elementsToReveal.forEach(el => observer.observe(el));
+
+    });
+    </script>
+
 </body>
 </html>
