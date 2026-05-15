@@ -3,245 +3,431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeifSecurity</title>
+    <meta name="description" content="SeifSecurity provides computer repair, remote support, tune-ups, malware removal, and practical cybersecurity help for home users and small offices worldwide.">
+    <title>SeifSecurity | Computer Repair & Cybersecurity Support</title>
+    <link rel="preload" as="image" href="cyberpunk-city.jpeg">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>SeifSecurity</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Submit Ticket</a></li>
-                <li><a href="#news-feed">News</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#adobe-stock">Stock-Images</a></li>
-                </ul>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="SeifSecurity home">
+            <span class="brand-mark">SS</span>
+            <span class="brand-name">SeifSecurity</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#process">Process</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#stock">Stock Images</a>
+            <a class="nav-cta" href="#contact">Submit Ticket</a>
         </nav>
     </header>
 
-    <section id="about" class="reveal-on-scroll">
-        <h2 class="neon-text">About Us</h2>
-        <p>With over 16 years of experience in security and computer repairs, SeifSecurity is dedicated to providing top-notch service with a high satisfaction rate. We specialize in troubleshooting, security, and system optimization.</p>
-        <ul>
-            <li>Virus & Malware Removal</li>
-            <li>Hardware Repair & Upgrades</li>
-            <li>System Tune-ups & Optimization</li>
-            <li>Data & Accounts Recovery</li>
-            <li>Network Setup & Security</li>
-        </ul>
-    </section>
+    <main>
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="eyebrow">Computer repair, remote support, and home cybersecurity</p>
+                <h1 id="hero-title">SeifSecurity</h1>
+                <p class="hero-copy">Fast diagnostics, cleaner systems, safer networks, and calm help when your computer starts acting strange.</p>
+                <div class="hero-actions" aria-label="Primary actions">
+                    <a class="button button-primary" href="#contact">Submit a Ticket</a>
+                    <a class="button button-secondary" href="#pricing">View Pricing</a>
+                </div>
+                <dl class="trust-strip" aria-label="Service highlights">
+                    <div>
+                        <dt>16+ years</dt>
+                        <dd>repair experience</dd>
+                    </div>
+                    <div>
+                        <dt>Worldwide help</dt>
+                        <dd>remote support options</dd>
+                    </div>
+                    <div>
+                        <dt>Clear pricing</dt>
+                        <dd>before work begins</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
 
-    <section id="pricing" class="reveal-on-scroll">
-        <h2 class="neon-text">Our Services & Pricing</h2>
-        <div class="pricing-grid">
-             <div class="pricing-item">
-                <h3>Full Computer Inspection & Enhancement</h3>
-                <p>Our comprehensive diagnostic checks your hardware components and software integrity. We optimize system performance by removing junk files, streamlining startup processes, applying essential security updates, and performing physical dust removal (internal/external) to enhance speed, stability, and lifespan. Ideal for preventative maintenance or resolving general slowness.</p>
-                <div class="price">$200 CAD</div>
+        <section id="services" class="section section-dark reveal">
+            <div class="section-heading">
+                <p class="eyebrow">What gets fixed</p>
+                <h2>Practical help for the problems that slow you down.</h2>
+                <p>From noisy desktops to suspicious pop-ups, SeifSecurity focuses on diagnosis first, then the repair that actually fits the issue.</p>
             </div>
-            <div class="pricing-item">
-                <h3>Remote Help Access Subscription</h3>
-                <p>Enjoy peace of mind with ongoing remote support. Get timely assistance via secure remote access for troubleshooting minor software issues, answering usage questions, basic setup guidance, and remote check-ups. *Requires initial system compatibility check and setup.* Convenient help without leaving home.</p>
-                <div class="price">$15 CAD / month</div>
-            </div>
-            <div class="pricing-item">
-                <h3>Cybersecurity Assessment</h3>
-                <p>An in-depth evaluation of your home computer or network's security posture. We identify potential vulnerabilities, check for malware/spyware, review firewall/antivirus settings, assess data backup strategies, and provide actionable recommendations to protect your personal data and privacy online. Price varies based on the number of devices and network complexity.</p>
-                <div class="price">$100 - $250 CAD</div>
-            </div>
-            <div class="pricing-item">
-                <h3>Data Recovery (Logical)</h3>
-                <p>Attempted recovery of deleted files, data from formatted drives, or inaccessible files due to logical issues (file system corruption, minor bad sectors). Includes initial diagnostics. *This service covers non-physical drive failures. Complex cases or physically damaged drives require specialized lab recovery (quoted separately). Success is not guaranteed.* Consultation required.</p>
-                <div class="price">Starting at $300 CAD + Media</div>
-            </div>
-        </div>
-        <p style="text-align: center; margin-top: 30px; font-size: 0.9em; color: #ccc;">Prices listed are estimates and may vary based on specific issues. Please contact us via the ticket form for a detailed quote.</p>
-    </section>
 
-    <section id="contact" class="reveal-on-scroll">
-        <h2 class="neon-text">Submit a Ticket</h2>
-        <p style="text-align: center;">Having computer troubles? Fill out the form below to submit a support ticket.</p>
-        <form id="contact-form" action="https://formspree.io/f/mwplygql" method="POST">
-            <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
-            <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
-            <textarea id="contact-message" name="message" placeholder="Describe your computer issue" required></textarea>
-            <button type="submit" class="glow-button">Submit Ticket</button>
-            <div id="form-error" class="error-message"></div>
-        </form>
-    </section>
+            <div class="service-grid">
+                <article class="service-card">
+                    <div class="service-card-body">
+                        <h3>Diagnostics & Tune-ups</h3>
+                        <p>Full system checks, startup cleanup, update review, performance tuning, and dust removal for slower machines.</p>
+                    </div>
+                </article>
 
-    <section id="news-feed" class="reveal-on-scroll">
-        <h2 class="neon-text">Latest Tech News</h2>
-        <div class="news-item">
-             <h3>New AI-Powered Security Tools Released</h3>
-             <p>AI is changing cybersecurity, making threat detection faster and more accurate.</p>
-             <a href="https://www.unite.ai/ai-cybersecurity-tools/" target="_blank" rel="noopener noreferrer" class="glow-button">Read More</a>
-         </div>
-         <div class="news-item">
-             <h3>How to Protect Your PC from Malware in 2025</h3>
-             <p>Learn the latest methods to keep your system safe from new threats.</p>
-             <a href="https://www.pcmag.com/picks/the-best-antivirus-protection" target="_blank" rel="noopener noreferrer" class="glow-button">Read More</a>
-         </div>
-        <h2 class="neon-text" style="margin-top: 40px; border-top: 1px solid rgba(0, 255, 255, 0.2); padding-top: 25px;">More Tech News (Feed)</h2>
-        <ul id="news-list"><li>Loading news feed...</li></ul>
-    </section>
+                <article class="service-card">
+                    <div class="service-card-body">
+                        <h3>Hardware Repairs</h3>
+                        <p>Upgrade planning, component swaps, storage replacement, overheating checks, and workstation cleanup.</p>
+                    </div>
+                </article>
 
-    <section id="reviews" class="reveal-on-scroll">
-        <h2 class="neon-text">Customer Reviews</h2>
-        <div id="reviews-container">
-            <div class="review-item">
-                <p>"I would highly recommend anyone with a computer to go through this process. I'm now confident my data is stored in the cloud, my computer is secure and with some other modifications works much quicker. "</p>
-                <p class="reviewer">- James C.</p>
-            </div>
-            <div class="review-item">
-                <p>"Seif was absolutely incredible. I was hacked by someone in Uganda and Seif was able to find them and helped me recover my data. Highly recommend!"</p>
-                <p class="reviewer">- Emily S.</p>
-            </div>
-            <div class="review-item">
-                <p>"Seif Security has my computer up and running faster and more efficient then it ever has. As a business owner this is very important. He explained everything he did in detail while on my computer. I will use Seif Security for any of my issues going forward. Thank you"</p>
-                <p class="reviewer">- Debbie</p>
-            </div>
-             <div class="review-item">
-                <p>"I received excellent service from Seif after a fraud incident. He secured my phone, set up stronger protections, and explained each step in clear, simple terms I could easily understand. Professional, courteous, and knowledgeable — highly recommended."</p>
-                <p class="reviewer">- Cathy C.</p>
-            </div>
-              <div class="review-item">
-                <p>"Seif does awesome work, fast, friendly and easy to work with. Helped me out multiple times with my pub."</p>
-                <p class="reviewer">- Jason Groenewegen</p>
-            </div>
-        </div>
-        <h3>Add Your Review</h3>
-        <form id="review-form" action="https://formspree.io/f/xyzeorpv" method="POST">
-            <input type="text" id="review-name" name="name" placeholder="Your Name" required>
-            <textarea id="review-text" name="review" placeholder="Write your review here..." required></textarea>
-            <button type="submit" class="glow-button">Submit Review</button>
-             <div id="review-error" class="error-message"></div>
-        </form>
-    </section>
+                <article class="service-card">
+                    <div class="service-card-body">
+                        <h3>Security Hardening</h3>
+                        <p>Malware checks, antivirus review, firewall basics, account safety, browser cleanup, and network recommendations.</p>
+                    </div>
+                </article>
 
-    <section id="adobe-stock" class="reveal-on-scroll">
-        <h2 class="neon-text">Looking for Stock Images?</h2>
-        <p style="text-align: center;">Beyond computer security, I'm also an Adobe Stock Contributor. If you need high-quality, royalty-free images for your projects, feel free to explore my portfolio.</p>
-        <div style="text-align: center; margin-top: 25px;">
-            <a href="https://stock.adobe.com/ca/contributor/212699398/cyph0" target="_blank" rel="noopener noreferrer" class="glow-button">View My Adobe Stock Portfolio</a>
-        </div>
-    </section>
-    <footer>
-        <p>SeifSecurity &copy; <span id="current-year"></span>. All rights reserved.</p>
+                <article class="service-card">
+                    <div class="service-card-body">
+                        <h3>Remote Help Desk</h3>
+                        <p>Secure remote support for everyday troubleshooting, software setup, quick questions, and recurring check-ins.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="pricing" class="section section-panel reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Service menu</p>
+                <h2>Choose the level of help you need.</h2>
+                <p>Every job starts with a clear conversation about symptoms, goals, and expected cost before repair work begins.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <article class="price-card featured">
+                    <p class="tag">Most requested</p>
+                    <h3>Full Inspection & Enhancement</h3>
+                    <p class="price">From $200</p>
+                    <ul>
+                        <li>Hardware and software diagnostic</li>
+                        <li>Startup and junk-file cleanup</li>
+                        <li>Security update review</li>
+                        <li>Internal and external dust removal</li>
+                    </ul>
+                    <a class="button button-primary" href="#contact">Book Inspection</a>
+                </article>
+
+                <article class="price-card">
+                    <p class="tag">Ongoing support</p>
+                    <h3>Remote Help Access</h3>
+                    <p class="price">From $15 / month</p>
+                    <ul>
+                        <li>Secure remote troubleshooting</li>
+                        <li>Basic setup guidance</li>
+                        <li>Software questions</li>
+                        <li>Compatibility check required</li>
+                    </ul>
+                    <a class="button button-secondary" href="#contact">Start Remote Help</a>
+                </article>
+
+                <article class="price-card">
+                    <p class="tag">Protection check</p>
+                    <h3>Cybersecurity Assessment</h3>
+                    <p class="price">$100-$250</p>
+                    <ul>
+                        <li>Malware and spyware review</li>
+                        <li>Firewall and antivirus settings</li>
+                        <li>Backup strategy check</li>
+                        <li>Home network recommendations</li>
+                    </ul>
+                    <a class="button button-secondary" href="#contact">Request Assessment</a>
+                </article>
+
+                <article class="price-card">
+                    <p class="tag">Recovery attempt</p>
+                    <h3>Logical Data Recovery</h3>
+                    <p class="price">From $300</p>
+                    <ul>
+                        <li>Deleted file recovery attempt</li>
+                        <li>Formatted drive review</li>
+                        <li>Inaccessible file diagnostics</li>
+                        <li>External media quoted separately</li>
+                    </ul>
+                    <a class="button button-secondary" href="#contact">Ask About Recovery</a>
+                </article>
+            </div>
+
+            <p class="pricing-note">Prices are starting estimates. Final quotes can be confirmed for your location and preferred currency before work begins.</p>
+        </section>
+
+        <section id="process" class="section section-dark reveal">
+            <div class="split">
+                <div class="section-heading align-left">
+                    <p class="eyebrow">How it works</p>
+                    <h2>Less confusion, more signal.</h2>
+                    <p>You get plain-language updates at each step, plus practical recommendations you can actually use after the repair.</p>
+                </div>
+
+                <ol class="process-list">
+                    <li>
+                        <span>01</span>
+                        <div>
+                            <h3>Describe the issue</h3>
+                            <p>Submit a ticket with the device type, symptoms, and anything that changed before the problem started.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>02</span>
+                        <div>
+                            <h3>Get a diagnosis</h3>
+                            <p>SeifSecurity reviews likely causes, checks risk level, and explains the repair path before continuing.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>03</span>
+                        <div>
+                            <h3>Approve the work</h3>
+                            <p>You see estimated pricing and next steps before any deeper cleanup, recovery, or upgrade work begins.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>04</span>
+                        <div>
+                            <h3>Leave safer than before</h3>
+                            <p>Your system comes back cleaner, better documented, and easier to keep secure.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section section-accent reveal" aria-labelledby="security-title">
+            <div class="security-copy">
+                <p class="eyebrow">Security tune-up</p>
+                <h2 id="security-title">A better computer is not just faster. It is harder to compromise.</h2>
+                <p>Every repair is a chance to tighten the basics: updates, backups, browser hygiene, passwords, recovery options, and malware protection.</p>
+            </div>
+            <ul class="check-grid" aria-label="Security tune-up items">
+                <li>Malware scan and suspicious app review</li>
+                <li>Browser extension and startup audit</li>
+                <li>Backup and recovery recommendations</li>
+                <li>Router and Wi-Fi safety guidance</li>
+            </ul>
+        </section>
+
+        <section id="reviews" class="section section-panel reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Client notes</p>
+                <h2>Repair support should feel calm, clear, and useful.</h2>
+            </div>
+
+            <div class="review-grid">
+                <article class="review-card">
+                    <p>"I would highly recommend anyone with a computer to go through this process. I'm now confident my data is stored in the cloud, my computer is secure and with some other modifications works much quicker."</p>
+                    <footer>James C.</footer>
+                </article>
+                <article class="review-card">
+                    <p>"Seif was absolutely incredible. I was hacked by someone in Uganda and Seif was able to find them and helped me recover my data. Highly recommend!"</p>
+                    <footer>Emily S.</footer>
+                </article>
+                <article class="review-card">
+                    <p>"Seif Security has my computer up and running faster and more efficient then it ever has. As a business owner this is very important. He explained everything he did in detail while on my computer. I will use Seif Security for any of my issues going forward. Thank you"</p>
+                    <footer>Debbie</footer>
+                </article>
+                <article class="review-card">
+                    <p>"I received excellent service from Seif after a fraud incident. He secured my phone, set up stronger protections, and explained each step in clear, simple terms I could easily understand. Professional, courteous, and knowledgeable &mdash; highly recommended."</p>
+                    <footer>Cathy C.</footer>
+                </article>
+                <article class="review-card">
+                    <p>"Seif does awesome work, fast, friendly and easy to work with. Helped me out multiple times with my pub."</p>
+                    <footer>Jason Groenewegen</footer>
+                </article>
+            </div>
+
+            <form id="review-form" class="compact-form" action="https://formspree.io/f/xyzeorpv" method="POST" novalidate>
+                <h3>Add your review</h3>
+                <div class="form-row">
+                    <label for="review-name">Name</label>
+                    <input type="text" id="review-name" name="name" autocomplete="name" required>
+                </div>
+                <div class="form-row">
+                    <label for="review-text">Review</label>
+                    <textarea id="review-text" name="review" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="button button-primary">Submit Review</button>
+                <p id="review-error" class="error-message" role="alert"></p>
+            </form>
+        </section>
+
+        <section id="stock" class="section stock-section reveal">
+            <div class="stock-copy">
+                <p class="eyebrow">Creative work</p>
+                <h2>Cyber-inspired stock images for your own projects.</h2>
+                <p>Separate from repair and security support, Seif also contributes royalty-free visuals on Adobe Stock.</p>
+            </div>
+            <a class="button button-secondary" href="https://stock.adobe.com/ca/contributor/212699398/cyph0" target="_blank" rel="noopener noreferrer">View Adobe Stock Portfolio</a>
+        </section>
+
+        <section id="contact" class="section contact-section reveal">
+            <div class="contact-copy">
+                <p class="eyebrow">Submit a ticket</p>
+                <h2>Tell me what is happening with your device.</h2>
+                <p>The more details you include, the faster the first diagnosis can be. Mention error messages, recent changes, device model, your location, and whether data recovery may be needed.</p>
+                <div class="contact-facts" aria-label="Contact expectations">
+                    <p><strong>Best for:</strong> slow computers, malware concerns, upgrade planning, data recovery questions, remote support, and home network issues.</p>
+                    <p><strong>Pricing:</strong> estimates are confirmed in a clear currency before repair work begins.</p>
+                </div>
+            </div>
+
+            <form id="contact-form" class="ticket-form" action="https://formspree.io/f/mwplygql" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="New SeifSecurity support ticket">
+
+                <div class="form-row">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="name" autocomplete="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-row">
+                        <label for="device-type">Device type</label>
+                        <select id="device-type" name="device_type">
+                            <option value="">Select one</option>
+                            <option>Desktop PC</option>
+                            <option>Laptop</option>
+                            <option>Home network</option>
+                            <option>External drive</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="urgency">Urgency</label>
+                        <select id="urgency" name="urgency">
+                            <option value="">Select one</option>
+                            <option>Routine tune-up</option>
+                            <option>Soon</option>
+                            <option>Urgent</option>
+                            <option>Data at risk</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="contact-message">Issue details</label>
+                    <textarea id="contact-message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="button button-primary">Send Ticket</button>
+                <p id="form-error" class="error-message" role="alert"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>SeifSecurity &copy; <span id="current-year"></span>. Computer repair, support, and practical cybersecurity.</p>
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener("DOMContentLoaded", () => {
+            const year = document.getElementById("current-year");
+            if (year) year.textContent = new Date().getFullYear();
 
-        // --- Set Current Year in Footer ---
-        const currentYearSpan = document.getElementById('current-year');
-        if (currentYearSpan) {
-            currentYearSpan.textContent = new Date().getFullYear();
-        }
+            const navToggle = document.querySelector(".nav-toggle");
+            const nav = document.getElementById("site-nav");
+            const navLinks = document.querySelectorAll(".site-nav a");
 
-        // --- RSS News Feed ---
-        const rssUrl = 'https://www.techrepublic.com/rssfeeds/articles/';
-        const newsList = document.getElementById('news-list');
-        if (newsList) { fetchRssFeed(rssUrl, newsList); }
+            if (navToggle && nav) {
+                navToggle.addEventListener("click", () => {
+                    const isOpen = nav.classList.toggle("is-open");
+                    navToggle.setAttribute("aria-expanded", String(isOpen));
+                    navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+                });
 
-        // --- Contact Form Client-Side Validation (for Formspree) ---
-        const contactForm = document.getElementById('contact-form');
-        const formError = document.getElementById('form-error');
-        if (contactForm && contactForm.action.includes('formspree')) {
-            setupFormValidation(contactForm, formError, ['name', 'email', 'message']);
-        }
+                navLinks.forEach((link) => {
+                    link.addEventListener("click", () => {
+                        nav.classList.remove("is-open");
+                        navToggle.setAttribute("aria-expanded", "false");
+                        navToggle.setAttribute("aria-label", "Open menu");
+                    });
+                });
+            }
 
-        // --- Review Form Client-Side Validation (for Formspree) ---
-        const reviewForm = document.getElementById('review-form');
-        const reviewError = document.getElementById('review-error');
-        if (reviewForm && reviewForm.action.includes('formspree')) {
-            setupFormValidation(reviewForm, reviewError, ['name', 'review']);
-        }
+            const revealTargets = document.querySelectorAll(".reveal");
+            if ("IntersectionObserver" in window) {
+                const revealObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12 });
 
-        // --- Helper Function: Email Validation ---
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
+                revealTargets.forEach((target) => revealObserver.observe(target));
+            } else {
+                revealTargets.forEach((target) => target.classList.add("is-visible"));
+            }
 
-        // --- Helper Function: Fetch RSS ---
-        function fetchRssFeed(url, listElement) {
-             fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`)
-              .then(response => {
-                  if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                  return response.json();
-              })
-              .then(data => {
-                 if (data.status === 'ok' && data.items && data.items.length > 0) {
-                     listElement.innerHTML = '';
-                     data.items.slice(0, 5).forEach(item => {
-                         const listItem = document.createElement('li');
-                         const title = item.title ? item.title.replace(/</g, "&lt;").replace(/>/g, "&gt;") : 'No title';
-                         listItem.innerHTML = `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${title}</a>`;
-                         listElement.appendChild(listItem);
-                     });
-                 } else {
-                    console.warn('RSS feed data not found or empty:', data);
-                    listElement.innerHTML = "<li>Could not load news feed at this time.</li>";
-                 }
-              })
-              .catch(error => {
-                  console.error('Error fetching or parsing the RSS feed:', error);
-                  listElement.innerHTML = "<li>Failed to load news feed. Please try again later.</li>";
-              });
-        }
+            const sections = document.querySelectorAll("main section[id]");
+            if ("IntersectionObserver" in window) {
+                const activeObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        navLinks.forEach((link) => {
+                            link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+                        });
+                    });
+                }, { rootMargin: "-35% 0px -55% 0px" });
 
-        // --- REUSABLE Helper Function: Form Validation Setup (for Formspree) ---
-        function setupFormValidation(form, errorElement, fieldNames) {
-             form.addEventListener('submit', function(event) {
-                errorElement.style.display = "none";
-                errorElement.innerHTML = "";
-                let errors = [];
-                fieldNames.forEach(fieldName => {
-                    const input = form.elements[fieldName];
-                    if (!input) return;
-                    const value = input.value.trim();
-                    const placeholder = input.placeholder || fieldName;
-                    if (!value) {
-                        errors.push(`Please enter ${placeholder.toLowerCase().replace('your ','').replace('...','')}.`);
-                    } else if (input.type === 'email' && !isValidEmail(value)) {
-                        errors.push(`Please enter a valid email address.`);
+                sections.forEach((section) => activeObserver.observe(section));
+            }
+
+            setupValidation(document.getElementById("contact-form"), document.getElementById("form-error"), {
+                name: "your name",
+                email: "a valid email address",
+                message: "a description of the issue"
+            });
+
+            setupValidation(document.getElementById("review-form"), document.getElementById("review-error"), {
+                name: "your name",
+                review: "your review"
+            });
+
+            function setupValidation(form, errorElement, fields) {
+                if (!form || !errorElement) return;
+
+                form.addEventListener("submit", (event) => {
+                    const errors = [];
+
+                    Object.entries(fields).forEach(([fieldName, label]) => {
+                        const field = form.elements[fieldName];
+                        if (!field) return;
+                        const value = field.value.trim();
+
+                        if (!value) {
+                            errors.push(`Please enter ${label}.`);
+                        } else if (field.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                            errors.push("Please enter a valid email address.");
+                        }
+                    });
+
+                    if (errors.length > 0) {
+                        event.preventDefault();
+                        errorElement.textContent = errors.join(" ");
+                        errorElement.classList.add("is-visible");
+                    } else {
+                        errorElement.textContent = "";
+                        errorElement.classList.remove("is-visible");
                     }
                 });
-                if (errors.length > 0) {
-                    event.preventDefault();
-                    errorElement.innerHTML = errors.join("<br>");
-                    errorElement.style.display = "block";
-                }
-            });
-        }
-
-        // --- Intersection Observer for Scroll Animations ---
-        const observerOptions = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.1
-        };
-        const observerCallback = (entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
             }
-          });
-        };
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-        const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
-        elementsToReveal.forEach(el => observer.observe(el));
-
-    });
+        });
     </script>
-
 </body>
 </html>
-
-
-
